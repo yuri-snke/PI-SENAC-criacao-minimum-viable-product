@@ -1,0 +1,180 @@
+button {
+  background-color: #007bff;
+  height: 45px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 15px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  cursor: pointer;
+  max-width: 200px;
+  transition: 0.4s;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+button a {
+  text-decoration: none;
+  color: #fff;
+}
+
+
+.btns{
+  display: flex;
+  flex-direction: row;
+  align-self: flex-end;
+  
+  margin-top: -30px;
+  font-size: 14px;
+}
+
+.btns a{
+  margin: 10px;
+  text-decoration: none;
+  color: #707070;
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 7px;
+  border: 1px solid #707070;
+  transition: background-color .7s;
+}
+
+
+.btns a:hover{
+  background-color: #707070;
+  color: #fff;
+ 
+}
+
+.btns a:nth-child(2):hover{
+  background-color: #a14444;
+}
+
+.boxes {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  height: 100px;
+}
+
+.box {
+  width: 200px;
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 5px;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  box-shadow: 3px 3px 5px #e3e3e3;
+}
+
+.lists {
+  
+  text-decoration: none;
+  background-color: #ffffff;
+  margin-top: 50px;
+  padding: 30px 100px;
+
+  box-shadow: 3px 3px 5px #e3e3e3;
+}
+
+.lists ul {
+  position: relative;
+  display: block;
+  text-decoration: none;
+}
+
+.lists ul li {
+  position: relative;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  gap: 15px;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 1px 3px 8px #e3e3e3;
+  margin-top: 30px;
+  padding: 30px 40px;
+}
+
+.lists ul li p {
+  color: #2e2c2c;
+}
+
+.lists p {
+  font-size: 14px;
+}
+
+@media screen and (max-width: 900px) {
+  .lists {
+    text-decoration: none;
+    background-color: #ffffff;
+    margin-top: 50px;
+    padding: 30px 50px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .boxes {
+    margin-top: 30px;
+    width: 100%;
+    /* background-color: aqua; */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: max-content;
+  }
+
+  .box {
+    margin: 10px;
+    width: 80%;
+    min-height: 100px;
+  }
+
+  .lists {
+    margin-top: 30px;
+    padding: 30px 50px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  header {
+    padding: 0px 30px;
+    height: 70px;
+  }
+
+  .box {
+    margin: 10px;
+    width: 85%;
+    min-height: 100px;
+  }
+
+  .lists {
+    margin-top: 30px;
+    padding: 30px 30px;
+  }
+
+  .lists ul li {
+    gap: 15px;
+    width: 100%;
+
+    margin-top: 20px;
+    padding: 20px 20px;
+    /* font-size: 10px; */
+  }
+
+  .lists ul li p {
+    font-size: 12px;
+  }
+
+  .lists h1 {
+    font-size: 20px;
+  }
+}
