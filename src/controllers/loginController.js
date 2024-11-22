@@ -1,7 +1,7 @@
 import { ValidarLogin } from "../data/repositories/loginRepository.js";
 import { gerarToken } from "../services/jwtService.js";
 
-const Userlogin = async (req, resp) => {
+export const Userlogin = async (req, resp) => {
   try {
     let userLogin = req.body;
 
@@ -17,5 +17,3 @@ const Userlogin = async (req, resp) => {
     console.log(err);
   }
 };
-
-export { Userlogin };

@@ -1,27 +1,17 @@
 import con from "../connection.js";
 
-async function CriarUsuario(usuario) {
-    let comando = `INSERT INTO tbl_usuario
+export async function CriarUsuario(usuario) {
+  let comando = `INSERT INTO tbl_usuario
                   (nome, email, senha)
                   VALUES (?, ?, ?)`;
-  
-    await con.query(comando, [
-      usuario.nome,
-      usuario.email,
-      usuario.senha
-    ]);  
-  }
 
-  async function obterUsuarioEmail(usuario) {
-    let comando = `select * from tbl_usuario where email = ?`;
-  
-    const [linhas] = await con.query(comando, [
-      usuario.email
-    ]);  
+  await con.query(comando, [usuario.nome, usuario.email, usuario.senha]);
+}
 
-    console.log(linhas)
+export async function obterUsuarioEmail(usuario) {
+  let comando = `select * from tbl_usuario where email = ?`;
 
-    return linhas;
-  }
+  const [linhas] = await con.query(comando, [usuario.email]);
 
-  export {CriarUsuario, obterUsuarioEmail}
+  return linhas;
+}
