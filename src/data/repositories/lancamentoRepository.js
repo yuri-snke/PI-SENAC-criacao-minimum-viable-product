@@ -22,7 +22,6 @@ export async function BuscarDespesasMes(userID) {
 }
 
 export async function BuscarReceitasMes(userID) {
-  console.log(userID);
   const comando = `SELECT COALESCE(SUM(valor), 0) AS valor
                   FROM tbl_lancamento
                   WHERE MONTH(data_lancamento) = MONTH(CURDATE())

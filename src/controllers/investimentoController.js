@@ -23,16 +23,14 @@ import { Investimento } from "../models/investimentoModel.js";
   };
 
   export const criarInvestimento = async (req, res) => {
-    try {
-      console.log(req.body)
+    try {s
       const investimento = new Investimento({
         ...req.body,
         usuario_id: req.usuario.userId,
         valor_investido: isNaN(parseFloat(req.body.valor_investido)) ? 0 : parseFloat(req.body.valor_investido), 
         rendimento_percentual_anual: isNaN(parseFloat(req.body.rendimento_percentual_anual)) ? 0 : parseFloat(req.body.rendimento_percentual_anual),
       });
-      
-      console.log(investimento)
+      s
       const investimentoId = await criarInvestimentoRep (investimento);
   
       res.send({

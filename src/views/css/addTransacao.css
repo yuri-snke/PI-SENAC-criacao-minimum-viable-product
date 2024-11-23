@@ -30,16 +30,17 @@
     text-decoration: none;
 }
 
-#btntransacao{
+input[type="button"]#btntransacao {
     border: none;
-    padding: 10px 18px;
     color: #fff;
-    background-color: #b1b1b1;
+    background-color: #0099FF; /* Cor atualizada */
     border-radius: 4px;
     cursor: pointer;
     transition: .5s;
     margin-top: 20px;
+    font-family: 'Inter', sans-serif; /* Fonte adicionada */
 }
+
 
 
 #btntransacao:hover{
