@@ -20,7 +20,6 @@ function formatarMoeda(input) {
   }
   
   function exibirModal(mensagem, formulario = null) {
-    debugger
     const modalMensagem = document.getElementById("modalMensagem");
     modalMensagem.querySelector("p").textContent = mensagem;
     modalMensagem.style.display = "block";

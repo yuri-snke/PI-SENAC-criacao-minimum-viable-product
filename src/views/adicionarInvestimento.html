@@ -6,6 +6,10 @@
     <title>Adicionar Investimento</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./js/adicionarInvestimento.js"></script>
+    <script src="./js/integracaoAPI.js"></script>
+    <script src="./js/util.js"></script>
+
 </head>
 <body>
     <header>
@@ -39,6 +43,13 @@
             </div>
         </section>
 
+        <div id="modalMensagem" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p></p>
+            </div>
+        </div>
+
 
         <section class="container_infos">
             <form action="investimentos.html" class="formulario" id="fm" method="post">
@@ -49,16 +60,16 @@
 
                 <div class="valor">
                     <label for="value_input">Valor investido:</label>
-                    <input type="number" name="value_input" id="value_input" required>
+                    <input type="text" name="value_input" id="value_input" oninput="formatarMoeda(this)" required>
                 </div>
                
                 <div class="valor">
                     <label for="value_input">Rendimento:</label>
-                    <input type="number" name="value_input" id="value_input" required>
+                    <input type="number" name="value_input" id="value_input_rendimento"  required>
                 </div>
 
-               <div class="btnAdicionarTransacao">
-                    <button id="btntransacao">Adicionar</button>
+                <div class="btnAdicionar">
+                    <input  type="button"  value="Adicionar" id="btntransacao"></input>
                </div>
                
 
