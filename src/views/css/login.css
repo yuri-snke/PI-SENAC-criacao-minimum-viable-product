@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    text-align: center;
+    background-color: #2C2E33;
+}
+
+body h1{
+    font-family: 'inter';
+    color: #fff;
+    margin-top: 50px;
+}
+
+.card_login{
+    position: relative;
+    text-align: left;
+    width: 420px;
+    height: 495px;
+    background-color: #fff;
+    margin: 50px auto;
+    border-radius: 5px;
+    padding: 50px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.card_login label{
+    color: #2C2E33;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Roboto Slab';
+}
+
+.card_login input{
+    height: 35px;
+    border: 2px solid #00000055;
+    border-radius: 3px;
+}
+
+.email, .senha{
+    display: flex;
+    flex-direction: column;
+}
+
+.btnLogin{
+    /* width: 100%; */
+   
+    
+}
+
+button{
+    border: none;
+    width: 70%;
+    height: 40px;
+    background-color: #0099FF;
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: 'inter';
+    font-weight: bold;
+    cursor: pointer;
+    /* align-self: flex-end; */
+    transition: .5s;
+    border-radius: 3px;
+    position: absolute;
+    bottom: 40px;
+    left: 60px;
+}
+
+button:hover{
+    background-color: #0473bc;
+}
+
+a{
+    font-family: 'inter';
+    color: #805EC3;
+
+}

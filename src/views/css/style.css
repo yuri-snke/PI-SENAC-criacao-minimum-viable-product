@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@import url(header.css);
+@import url(conta.css);
+@import url(transacoes.css);
+@import url(gastos.css);
+@import url(addTransacao.css);
+@import url(addGasto.css);
+@import url(investimentos.css);
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter';
+}
+
+body{
+    background-color: #F1F1F1;
+}
+
+
+main{
+    padding: 0px 100px;
+}
+
+
+.blue{
+    border-left: solid 9px #3C8FEE;
+}
+
+.green{
+    border-left: solid 9px #33D45E;
+}
+
+.red{
+    border-left: solid 9px #D43333;
+}
+
+
+@media screen and (max-width: 1000px) {
+
+    main{
+        padding: 0px 50px;
+    }
+
+}
+
+
+
+@media screen and (max-width: 500px) {
+
+    main{
+        padding: 0px 30px;
+    }
+
+}
+
+
+
+@media screen and (max-width: 400px) {
+    main{
+        padding: 0px 15px;
+    }
+
+}

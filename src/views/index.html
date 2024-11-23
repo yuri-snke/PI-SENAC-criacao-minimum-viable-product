@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha conta</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./js/index.js"></script>
+    <script src="./js/util.js"></script>
+    <script src="./js/integracaoAPI.js"></script>
+
+
+</head>
+<body>
+    <header>
+        <div class="logo">FinControle</div>
+        <div class="itens_menu_header">
+            <ul id="itens_menu">
+                <li><a href="index.html" class="active">Conta</a></li>
+                <li><a href="investimentos.html">Investimento</a></li>
+                <li><a href="gastos.html">Gastos</a></li>
+                <li><a href="lancamentos.html">Lançamentos</a></li>
+                <li><a href="login.html">Sair <i class="fa-solid fa-arrow-right-from-bracket"></i></a></li>
+            </ul>
+        </div>
+
+       
+        <i id="menu_mob" class="fa-solid fa-bars"></i>
+       
+    </header>
+
+    <main>
+        <section>
+            <div class="line_top">
+                <h1>Minha conta</h1>
+
+                <div class="icon_user">
+                    <div class="icon_circle">  <i class="fa-solid fa-user"></i></div>
+                    <p id="nomeUsuario">username</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="container_infos">
+            <div class="transacoes">
+                <div class="blue content-info">
+                    <h2>Saldo Atual</h2>
+                    <h3 id="saldo">0</h3>
+                </div>
+    
+    
+                <div class="green content-info">
+                    <h2>Receitas Mensais</h2>
+                    <h3 id="receita">0</h3>
+                </div>
+    
+                <div class="red content-info">
+                    <h2>Despesas Mensais</h2>
+                    <h3 id="despesa">0</h3>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+</body>
+<script src="./src/js/menu.js"></script>
+</html>

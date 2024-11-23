@@ -5,8 +5,9 @@ const secret = "ptidesenvolvimento";
 export function gerarToken(usuario) {
   const user = {
     userId: usuario.id,
+    userName: usuario.nome
   };
-  return jwt.sign(user, secret, { expiresIn: "1h" });
+  return {"token": jwt.sign(user, secret, { expiresIn: "1h" }), "nomeUsuario": usuario.nome};
 }
 
 export function verificarToken(req, res, next) {

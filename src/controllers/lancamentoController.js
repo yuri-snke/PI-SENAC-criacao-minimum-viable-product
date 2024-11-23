@@ -6,6 +6,7 @@ import {
   CriarLancamento,
   ExcluirLancamento,
   ObterLancamentoPorId,
+  BuscarDespesasMesItens,
 } from "../data/repositories/lancamentoRepository.js";
 import { Lancamento } from "../models/lancamentoModel.js";
 
@@ -145,3 +146,25 @@ export const atualizarLancamentoPorId = async (req, res) => {
     res.status(500).send({ error: error.message });
   }
 };
+
+export const obterLancamentoDespesasMes = async (req, res) => {
+  try {
+    const lancamentosData = await BuscarDespesasMesItens(
+      req.usuario.userId
+    );
+
+    if (lancamentosData.length > 0) {
+      const lancamentos = lancamentosData.map(
+        (lancamento) => new Lancamento(lancamento)
+      );
+
+      res.send(lancamentos);
+    } else {
+      res.status(404).send({ message: "Nenhum resultado encontrado" });
+    }
+  } catch (err) {
+    res.status(500).send({ error: err.message });
+  }
+};
+
+

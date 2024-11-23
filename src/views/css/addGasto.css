@@ -1,0 +1,11 @@
+
+#btngasto{
+    border: none;
+    padding: 10px 18px;
+    color: #fff;
+    background-color: #b1b1b1;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .5s;
+    margin-top: 20px;
+}

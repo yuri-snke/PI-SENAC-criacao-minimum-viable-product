@@ -1,0 +1,152 @@
+
+.line_top{
+    padding: 30px 0;
+    padding-bottom: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.line_top h1{
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.icon_user{
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;    
+}
+
+.icon_user p{
+    margin-left: 15px;  
+    font-size: 24px;
+    color: #959595;
+}
+
+.icon_user i{
+    position: relative;
+    font-size: 24px;
+    color: #959595;
+}
+
+
+.icon_circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #D9D9D9;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+}
+
+
+.container_infos{
+    /* background-color: aqua; */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.transacoes{
+    width: 100%;
+}
+
+.content-info{
+    position: relative;
+    background-color: #fff;
+    width: 100%;
+    box-shadow: 3px 3px 5px #0000002f;
+    min-height: 130px;
+    margin: 35px 0;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;  
+}
+
+
+.content-info:hover{
+    opacity: .6;
+}
+
+
+@media screen and (max-width: 1000px) {
+        
+    .container_infos{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+    }
+}
+
+
+
+
+@media screen and (max-width: 700px) {
+
+    .line_top h1{
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    
+    .icon_user i{
+        font-size: 18px;
+    }
+
+    .icon_circle{   
+        height: 35px;
+        width: 35px;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+
+    .line_top h1{
+        font-size: 20px;
+        font-weight: 600;
+    }
+        
+    .icon_user p{
+        margin-left: 10px;  
+        font-size: 18px;
+    }
+  
+    .icon_user i{
+        font-size: 15px;
+    }
+
+    .icon_circle{   
+        height: 30px;
+        width: 30px;
+    }
+        
+    .content-info{
+        padding: 20px 15px;
+        margin: 20px 0;
+        min-height: 100px;
+        gap: 20px;
+    }
+
+        
+    .content-info h2{
+        font-size: 20px;
+    }
+
+    .content-info h3{
+        font-size: 18px;
+    }
+            
+    
+}
+

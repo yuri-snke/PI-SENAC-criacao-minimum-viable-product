@@ -22,6 +22,7 @@ export async function BuscarDespesasMes(userID) {
 }
 
 export async function BuscarReceitasMes(userID) {
+  console.log(userID);
   const comando = `SELECT COALESCE(SUM(valor), 0) AS valor
                   FROM tbl_lancamento
                   WHERE MONTH(data_lancamento) = MONTH(CURDATE())
@@ -103,4 +104,16 @@ export async function AtualizarLancamentoPorId(lancamento) {
       throw new Error("Falha ao atualizar lançamento.");
     }
   }
+}
+
+export async function BuscarDespesasMesItens(userID) {
+  const comando = `SELECT * 
+                  FROM tbl_lancamento
+                  WHERE MONTH(data_lancamento) = MONTH(CURDATE())
+                  AND YEAR(data_lancamento) = YEAR(CURDATE())
+                  AND usuario_id = ?
+                  AND tipo_lancamento = 'despesa'`;
+
+  const [linhas] = await con.query(comando, [userID]);
+  return linhas;
 }

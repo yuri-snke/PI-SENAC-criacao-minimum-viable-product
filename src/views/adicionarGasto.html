@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Gastos</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="logo">FinControle</div>
+        <div class="itens_menu_header">
+            <ul id="itens_menu">
+                <li><a href="index.html">Conta</a></li>
+                <li><a href="investimentos.html">Investimento</a></li>
+                <li><a href="gastos.html" class="active">Gastos</a></li>
+                <li><a href="transacoes.html">Transações</a></li>
+                <li><a href="login.html">Sair <i class="fa-solid fa-arrow-right-from-bracket"></i></a></li>
+            </ul>
+        </div>
+
+       
+        <i id="menu_mob" class="fa-solid fa-bars"></i>
+       
+    </header>
+
+    <main>
+        <section>
+            <div class="line_top">
+                <h1>Adicionar Gasto</h1>
+
+                <div class="icon_user">
+                    <a href="transacoes.html"><i class="fa-solid fa-reply"></i></a>
+                    <a id="return" href="gastos.html">
+                        <p>voltar</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="container_infos">
+            <form action="gastos.html" class="formulario" id="fm_gasto" method="post">
+                <div class="descricao">
+                    <label for="description_input">Descrição do gasto:</label>
+                    <input type="text" name="description_input" id="description_gasto_input" required>
+                </div>
+
+                <div class="valor">
+                    <label for="value_input">Valor do gasto:</label>
+                    <input type="number" name="value_input" id="value_gasto_input" required>
+                </div>
+               
+               <div class="datee">
+                    <label for="Entry">Selecione a data:</label>
+                    <input type="date" name="date" id="date_input" required>
+               </div>
+
+               <div class="btnAdicionarTransacao">
+                    <button id="btngasto" >Adicionar</button>
+               </div>
+               
+
+            </form>
+            
+        </section>
+
+    </main>
+</body>
+<script src="./src/js/menu.js"></script>
+<script src="./src/js/formAddGasto.js"></script>
+</html>

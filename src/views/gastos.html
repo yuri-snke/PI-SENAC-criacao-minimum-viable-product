@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Gastos</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./js/gastos.js"></script>
+    <script src="./js/integracaoAPI.js"></script>
+    <script src="./js/util.js"></script>
+
+
+
+</head>
+<body>
+    <header>
+        <div class="logo">FinControle</div>
+        <div class="itens_menu_header">
+            <ul id="itens_menu">
+                <li><a href="index.html">Conta</a></li>
+                <li><a href="investimentos.html">Investimento</a></li>
+                <li><a href="gastos.html" class="active">Gastos</a></li>
+                <li><a href="lancamentos.html">Lançamentos</a></li>
+                <li><a href="login.html">Sair <i class="fa-solid fa-arrow-right-from-bracket"></i></a></li>
+            </ul>
+        </div>
+
+       
+        <i id="menu_mob" class="fa-solid fa-bars"></i>
+       
+    </header>
+
+    <main>
+        <section>
+            <div class="line_top">
+                <h1>Controle de gastos</h1>
+
+                <div class="icon_user">
+                    <div class="icon_circle">  <i class="fa-solid fa-user"></i></div>
+                    <p id="nomeUsuario"></p>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="">
+            <table class="tabelinha" id="listaRegistros">
+                <tr class="linetop">
+                    <td>N </td>
+                    <td>Descrição</td>
+                    <td>Valor</td>
+                    <td>Data</td>
+                    <td><span></span></td>
+                </tr>
+                
+            </table>
+        
+            
+        </section>
+
+        <div class="btnAdd">
+            <a href="adicionarGasto.html">Adicionar</a>
+        </div>
+    </main>
+</body>
+<script src="./src/js/menu.js"></script>
+
+
+</html>

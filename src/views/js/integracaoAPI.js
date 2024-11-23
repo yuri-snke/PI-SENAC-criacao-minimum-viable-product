@@ -105,3 +105,7 @@ async function Logoff() {
 
   window.location.href = "./login.html";
 }
+
+async function BuscaNomeUsuario() {
+  return localStorage.getItem("nomeUsuario");
+}

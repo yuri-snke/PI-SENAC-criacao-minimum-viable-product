@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lançamentos</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./js/lancamentos.js"></script>
+    <script src="./js/integracaoAPI.js"></script>
+    <script src="./js/util.js"></script>
+
+
+
+</head>
+<body>
+    <header>
+        <div class="logo">FinControle</div>
+        <div class="itens_menu_header">
+            <ul id="itens_menu">
+                <li><a href="index.html">Conta</a></li>
+                <li><a href="investimentos.html">Investimento</a></li>
+                <li><a href="gastos.html">Gastos</a></li>
+                <li><a href="lancamentos.html" class="active">Lançamentos</a></li>
+                <li><a href="login.html">Sair <i class="fa-solid fa-arrow-right-from-bracket"></i></a></li>
+            </ul>
+        </div>
+
+       
+        <i id="menu_mob" class="fa-solid fa-bars"></i>
+       
+    </header>
+
+    <main>
+        <section>
+            <div class="line_top">
+                <h1>Lançamentos</h1>
+
+                <div class="icon_user">
+                    <div class="icon_circle">  <i class="fa-solid fa-user"></i></div>
+                    <p id="nomeUsuario"></p>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="container_infos">
+
+            <ul class="entradas" id="listaRegistros">
+               
+            </ul>
+           
+            <div class="quantidade">
+                <h2>Quantidade de entradas:</h2>
+                <p id="countEntrada">0</p>
+                <h2>Quantidade de saídas:</h2>
+                <p id="countSaida">0</p>
+            </div>
+            
+        </section>
+
+        <div class="btnAdd">
+           <a href="adicionarTransacao.html">Adicionar</a>
+        </div>
+    </main>
+</body>
+
+
+<script>
+    const iconeDelete = document.getElementsByClassName('fa-xmark');
+ 
+     Array.from(iconeDelete).forEach((iconeDelete) => {
+        iconeDelete.addEventListener('click', () => {
+             confirm('Deseja excluir essa Entrada|saida ?');
+         });
+     });
+ 
+     
+ 
+ </script>
+</html>

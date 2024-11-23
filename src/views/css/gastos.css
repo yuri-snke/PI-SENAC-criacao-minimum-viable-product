@@ -1,0 +1,107 @@
+.tabelinha{
+    width: 100%;
+    margin: 50px 0;
+    text-align: center;
+    border: none;
+}
+
+.tabelinha tr{
+    height: 50px;
+}
+
+.tabelinha td{ 
+    border: 1px solid #2C2E33;
+}
+
+
+.linetop{
+    background-color: #2C2E33;
+    color: #fff; 
+    font-weight: bold;
+}
+
+
+.lixeira{
+    cursor: pointer;
+    transition: .5s;
+    background: #CA3030;
+    color: #fff;
+}
+
+.listaCards {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+  }
+
+
+
+.lixeira:hover{
+    background: #8e2222;
+}
+
+
+.btnAdd{
+    position: fixed;
+    bottom: 40px;
+    right: 100px;
+    color: #fff;
+    background-color: #0088FF;
+    padding: 10px 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.btnAdd a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.btnAdd:hover{
+    background-color: #0571cf;
+}
+
+@media screen and (max-width: 1000px) {
+        
+    .btnAdd{
+        right: 50px;
+    }
+
+}
+
+
+@media screen and (max-width: 500px) {
+
+    .tabelinha{
+        margin: 40px 0;
+        font-size: 12px;
+    }
+
+        
+    .tabelinha tr{
+        height: 35px;
+    }
+
+    .btnAdd{
+        font-size: 12px;
+        right: 30px;
+    }
+
+}
+
+
+
+@media screen and (max-width: 400px) {
+
+    .tabelinha{
+        margin-top: 10px;
+        font-size: 10px;
+    }
+
+        
+    .tabelinha tr{
+        height: 35px;
+    }
+
+}
