@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", async function (e) {
 
   
     novoRegistro.innerHTML = `<div class="${cardCollor}">
-                      <p class="ID_transacao" style="display:none;">ID: ${
+                      <p class="ID_lancamento" style="display:none;">ID: ${
                       registro.id
                     }</p>
                     <i class="fa-solid fa-xmark" onclick="confirmarExclusao(${

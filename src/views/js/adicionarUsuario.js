@@ -1,8 +1,8 @@
 async function CriarUsuario() {
-  const nome = document.getElementById("nome").value;
-  const email = document.getElementById("email").value;
-  const senha = document.getElementById("senha").value;
-  const senhaConf = document.getElementById("senhaConf").value;
+  const nome = document.getElementById("nome_input").value;
+  const email = document.getElementById("email_input").value;
+  const senha = document.getElementById("senha_input").value;
+  const senhaConf = document.getElementById("senha_input_conf").value;
 
   if (validaCriacao(nome, email, senha, senhaConf)) {
     usuario = {
@@ -40,7 +40,7 @@ async function validaCriacao(nome, email, senha, senhaConf) {
 }
 
 async function validaSenha() {
-  const senha = document.getElementById("senha").value;
+  const senha = document.getElementById("senha_input").value;
   if (senha.length <= 2)
     document.getElementById("respostaSenha").innerHTML =
       "<font color='red'>Senha muito curta.</font>";
@@ -48,8 +48,8 @@ async function validaSenha() {
 }
 
 function comparaSenhas() {
-  const senha = document.getElementById("senha").value;
-  const senhaConf = document.getElementById("senhaConf").value;
+  const senha = document.getElementById("senha_input").value;
+  const senhaConf = document.getElementById("senha_input_conf").value;
 
   if (senha == senhaConf)
     document.getElementById("respostaSenhaConf").innerHTML = "";
@@ -59,7 +59,7 @@ function comparaSenhas() {
 }
 
 function validacaoEmail(field) {
-  const email = document.getElementById("email").value;
+  const email = document.getElementById("email_input").value;
   usuario = email.substring(0, email.indexOf("@"));
   dominio = email.substring(email.indexOf("@") + 1, email.length);
 

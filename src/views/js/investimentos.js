@@ -1,63 +1,60 @@
 document.addEventListener("DOMContentLoaded", async function (e) {
     await ValidaToken();
 
-    const usuario = await BuscaNomeUsuario();
-    document.getElementById("nomeUsuario").innerHTML = usuario;
   
-    const lancamentos = await GetAPI("/api/lancamento/despesamensalitens");
+    const lancamentos = await GetAPI("/api/investimentos");
   
     if (lancamentos && lancamentos.message === "Nenhum resultado encontrado") {
       return;
     }
-    let countEntrada = 0;
-    let countSaida = 0;
-  
-    lancamentos.forEach(async (registro) => {
-      if(registro.tipo_lancamento == "despesa"){
-        countSaida++;
-      }else{
-        countEntrada++;
-      }
+    let totalinvestiment = 0;
+    lancamentos.forEach(async (registro) => {   
+        totalinvestiment = totalinvestiment + registro.valor_investido;
       await CriarRegistro(registro);
     });
+
+
+    
+    document.getElementById("totalInvestido").innerHTML = mascaraMoeda(totalinvestiment);
 
 
 });
 
 
 async function CriarRegistro(registro) {
-    const novoRegistro = document.createElement("tr");
-    let cardCollor = "green content-info";
-    
-
-
-    if(registro.tipo_lancamento == "despesa")     
-      cardCollor = "red content-info"
-
+    const novoRegistro = document.createElement("div");
+ 
   
-    novoRegistro.innerHTML = ` <td>${
-                        registro.id
-                        }</td>
-                        <td>${registro.nome_lancamento}</td>
-                        <td>${mascaraMoeda(registro.valor)}</td>
-                        <td>12/01/2024</td>
-                        <td class="lixeira" id="lixeira" onclick="confirmarExclusao(${
-                        registro.id
-                        })"><i class="fa-solid fa-trash" ></i></td>`;
+    novoRegistro.innerHTML = `  <div class="card_investimento">
+                    <div class="nomeInveste" id="nomeInvestimento">
+                        <h4>Nome investimento</h4>
+                        <h5>${
+                            registro.nome_investimento
+                          }</h5>
+                    </div>
+                    <div class="valorInveste" id="valorInvestido">
+                        <h4>Valor investido</h4>
+                        <h5>${
+                            mascaraMoeda(registro.valor_investido)
+                          }</h5>
+                    </div>
+                    <div class="rendimentoInveste" id="rendimentoInvestido">
+                        <h4>Rendimento anual</h4>
+                        <h5>${
+                            registro.rendimento_percentual_anual
+                          }%</h5>
+                    </div>
+                    <div class="estimativaInveste id="valorEstimado"">
+                        <h4>Valor estimado</h4>
+                        <h5>${
+                            mascaraMoeda(registro.rendimento_esperado)
+                          }</h5>
+                    </div>
+
+                </div>`;
   
-    document.getElementById("listaRegistros").appendChild(novoRegistro);
+    document.getElementById("listaCards").appendChild(novoRegistro);
 }
 
-async function confirmarExclusao(id) {
-    if (confirm(`Deseja excluir o lançamento?`)) {
-      try {
-        await DeleteAPI(`/api/lancamento/${id}`);
-  
-        window.location.reload();
-      } catch (error) {
-        alert("Erro ao excluir transação. Por favor, tente novamente.");
-      }
-    }
-  }
 
   

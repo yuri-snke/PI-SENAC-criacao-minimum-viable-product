@@ -7,6 +7,8 @@
 @import url(addTransacao.css);
 @import url(addGasto.css);
 @import url(investimentos.css);
+@import url(modal.css);
+
 
 *{
     padding: 0;

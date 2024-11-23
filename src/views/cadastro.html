@@ -5,26 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
     <link rel="stylesheet" href="./css/login.css">
+    <script src="./js/adicionarUsuario.js"></script>
+    <script src="./js/integracaoAPI.js"></script>
+    <script src="./js/util.js"></script>
+
 </head>
 <body>
     <h1>FinControle</h1>
     <form class="card_login" action="index.html" method="POST">
         <div class="email">
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome_input" required>
+        </div>
+        <div class="email">
             <label for="email">Email:</label>
-            <input type="email" name="email" id="email_input" required>
+            <input type="email" name="email" id="email_input"  onchange="validacaoEmail()" required>
+            <p id="respostaEmail"></p>
         </div>
 
         <div class="senha">
             <label for="senha">Senha:</label>
-            <input type="password" name="senha" id="senha_input" required>
+            <input type="password" name="senha" id="senha_input" onkeyup="validaSenha()"  required>
+            <p id="respostaSenha"></p>
         </div>
 
         <div class="senha">
             <label for="senha">Confirmar Senha:</label>
-            <input type="password" name="senha" id="senha_input" required>
+            <input type="password" name="senha" id="senha_input_conf" onkeyup="comparaSenhas()" required>
+            <p id="respostaSenhaConf"></p>
         </div>
        <span></span>
-        <button>Cadastrar</button>
+       <input type="button" value="Cadastrar " onclick="CriarUsuario()">
       
     </form>
 </body>

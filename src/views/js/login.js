@@ -12,5 +12,5 @@ async function FazerLogin() {
 }
 
 async function RedirectCriarUsuario(){
-  window.location.href = "./criarUsuario.html";
+  window.location.href = "./cadastro.html";
 }
