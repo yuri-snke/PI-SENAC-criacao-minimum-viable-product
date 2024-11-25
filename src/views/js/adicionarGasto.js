@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
     document.querySelector(".close").addEventListener("click", function () {
       document.getElementById("modalMensagem").style.display = "none";
-      history.back();
-      // window.location.href = "./lancamentos.html";
+      
+      window.location.href = "./gastos.html";
     });
   });
